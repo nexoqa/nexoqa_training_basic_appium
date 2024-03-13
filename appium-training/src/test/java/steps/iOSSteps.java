@@ -23,11 +23,13 @@ public class iOSSteps {
 
     @Given("the user adds the first number {int}")
     public void addNumber1(int number) throws InterruptedException {
+        homePageIOS.getNumber1().clear();
         homePageIOS.getNumber1().sendKeys(String.valueOf(number));
     }
 
     @And("the user adds the second number {int}")
     public void addNumber2(int number) throws InterruptedException {
+        homePageIOS.getNumber2().clear();
         homePageIOS.getNumber2().sendKeys(String.valueOf(number));
     }
 

@@ -16,10 +16,10 @@ public class HomePageIOS {
 
     public HomePageIOS(AppiumDriver driver){
 
-        this.number1 = driver.findElement(AppiumBy.xpath(""));
-        this.number2 = driver.findElement(AppiumBy.xpath(""));
-        this.button = driver.findElement(AppiumBy.xpath(""));
-        this.result = driver.findElement(AppiumBy.xpath(""));
+        this.number1 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerA']"));
+        this.number2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerB']"));
+        this.button = driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name='ComputeSumButton']"));
+        this.result = driver.findElement(AppiumBy.xpath("//XCUIElementTypeStaticText[@name='Answer']"));
     }
 
 

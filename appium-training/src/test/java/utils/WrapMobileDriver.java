@@ -23,7 +23,7 @@ public class WrapMobileDriver {
                             .amend("platformName", "iOS")
                             .amend("appium:platformVersion", "17.2")
                             .amend("appium:app",
-                                    "/Users/jojedava/jojedava-git/ios-test-app/build/Release-iphonesimulator/TestApp-iphonesimulator.app")
+                                    "/Users/jojedava/accenture-appium-test/nexoqa_training_basic_appium/appium-training/builds/ios/TestApp-iphonesimulator.app")
                             .amend("appium:deviceName", "iPhone 15 Pro Max")
                             .amend("appium:automationName", "xcuitest")
                             .amend("appium:noReset", true)
