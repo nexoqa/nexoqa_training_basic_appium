@@ -12,6 +12,7 @@ public class HomePageIOS {
     private WebElement numberB;
     private WebElement button;
     private WebElement result;
+    private WebElement alertMessageLink;
 
 
     public HomePageIOS(AppiumDriver driver){
@@ -20,6 +21,7 @@ public class HomePageIOS {
         this.numberB = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerB']"));
         this.button = driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name='ComputeSumButton']"));
         this.result = driver.findElement(AppiumBy.xpath("//XCUIElementTypeStaticText[@name='Answer']"));
+        this.alertMessageLink = driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name='show alert']"));
     }
 
 
@@ -37,6 +39,11 @@ public class HomePageIOS {
 
     public WebElement getResult() {
         return this.result;
+    }
+
+
+    public WebElement getAlertMessageLink() {
+        return this.alertMessageLink;
     }
 
 }

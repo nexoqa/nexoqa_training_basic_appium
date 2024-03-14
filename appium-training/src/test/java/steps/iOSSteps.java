@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobject.home.AlertIOS;
 import pageobject.home.HomePageIOS;
 
 import org.junit.Assert;
@@ -13,6 +14,7 @@ import utils.WrapMobileDriver;
 public class iOSSteps {
 
     private HomePageIOS homePageIOS;
+    private AlertIOS alertIOS;
 
     private AppiumDriver driver;
 
@@ -43,5 +45,29 @@ public class iOSSteps {
         Assert.assertEquals(Integer.valueOf(result), Integer.valueOf(homePageIOS.getResult().getText()));
         // Assert.assertTrue(result == Integer.valueOf(homePageIOS.getResult().getText()));
     }
+
+    @Given("the alert message is Open")
+    public void openAlertMessage(){
+        homePageIOS.getAlertMessageLink().click();
+        alertIOS = new AlertIOS(driver);
+    }
+
+    @When("the ok button is clicked")
+    public void the_ok_button_is_clicked() {
+        alertIOS.getOkButton().click();
+    }
+
+    @Then("the alert message is Closed")
+    public void the_alert_message_is_closed() {
+        boolean actual = false;
+        try{
+            actual = alertIOS.getWindow().isDisplayed();
+        }
+        catch(Exception ex){
+            actual = false;
+        }
+        Assert.assertEquals(false, actual);
+    }
+    
 
 }

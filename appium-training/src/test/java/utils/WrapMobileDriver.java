@@ -26,7 +26,7 @@ public class WrapMobileDriver {
                                     "/Users/jojedava/accenture-appium-test/nexoqa_training_basic_appium/appium-training/builds/ios/TestApp-iphonesimulator.app")
                             .amend("appium:deviceName", "iPhone 15 Pro Max")
                             .amend("appium:automationName", "xcuitest")
-                            .amend("appium:noReset", true)
+                            .amend("appium:noReset", false)
                             .amend("appium:fullReset", false)
                             .amend("appium:includeSafariInWebviews", true)
                             .amend("appium:newCommandTimeout", 3600)
