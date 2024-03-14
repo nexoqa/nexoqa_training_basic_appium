@@ -8,16 +8,16 @@ import io.appium.java_client.AppiumDriver;
 
 public class HomePageIOS {
 
-    private WebElement number1;
-    private WebElement number2;
+    private WebElement numberA;
+    private WebElement numberB;
     private WebElement button;
     private WebElement result;
 
 
     public HomePageIOS(AppiumDriver driver){
 
-        this.number1 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerA']"));
-        this.number2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerB']"));
+        this.numberA = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerA']"));
+        this.numberB = driver.findElement(AppiumBy.xpath("//XCUIElementTypeTextField[@name='IntegerB']"));
         this.button = driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name='ComputeSumButton']"));
         this.result = driver.findElement(AppiumBy.xpath("//XCUIElementTypeStaticText[@name='Answer']"));
     }
@@ -27,12 +27,12 @@ public class HomePageIOS {
         return this.button;
     }
 
-    public WebElement getNumber1() {
-        return this.number1;
+    public WebElement getNumberA() {
+        return this.numberA;
     }
 
-    public WebElement getNumber2() {
-        return this.number2;
+    public WebElement getNumberB() {
+        return this.numberB;
     }
 
     public WebElement getResult() {

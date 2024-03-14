@@ -22,26 +22,26 @@ public class iOSSteps {
     }
 
     @Given("the user adds the first number {int}")
-    public void addNumber1(int number) throws InterruptedException {
-        homePageIOS.getNumber1().clear();
-        homePageIOS.getNumber1().sendKeys(String.valueOf(number));
+    public void addNumberA(int number) throws InterruptedException {
+        homePageIOS.getNumberA().clear();
+        homePageIOS.getNumberA().sendKeys(String.valueOf(number));
     }
 
     @And("the user adds the second number {int}")
-    public void addNumber2(int number) throws InterruptedException {
-        homePageIOS.getNumber2().clear();
-        homePageIOS.getNumber2().sendKeys(String.valueOf(number));
+    public void addNumberB(int number) throws InterruptedException {
+        homePageIOS.getNumberB().clear();
+        homePageIOS.getNumberB().sendKeys(String.valueOf(number));
     }
 
     @When("the user clicks on the button")
     public void clickOnButton() throws InterruptedException {
         homePageIOS.getButton().click();
-
     }
 
     @Then("the app show the operation result {int}")
     public void getResult(int result) {
-        Assert.assertTrue(result == Integer.valueOf(homePageIOS.getResult().getText()));
+        Assert.assertEquals(Integer.valueOf(result), Integer.valueOf(homePageIOS.getResult().getText()));
+        // Assert.assertTrue(result == Integer.valueOf(homePageIOS.getResult().getText()));
     }
 
 }
